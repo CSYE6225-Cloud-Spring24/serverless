@@ -77,7 +77,8 @@ public class PubSubFunction implements CloudEventsFunction {
     System.out.println("Formatted Expiration Time: " + formattedExpirationTime);
 
     // Include the UserId (token) and expiration time in the verification link
-    String verificationLink = "http://keerthanamikkili.me:8080/verify-email?token=" + ID;
+    // String verificationLink = "http://keerthanamikkili.me:8080/verify-email?token=" + ID;
+    String verificationLink = "https://keerthanamikkili.me/verify-email?token=" + ID;
     System.out.println("Verification Link: " + verificationLink);
 
     saveToDatabase(email, formattedExpirationTime, ID);
